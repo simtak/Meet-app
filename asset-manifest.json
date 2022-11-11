@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/simtak/Meet-app/static/css/main.073c9b0a.css",
+    "main.js": "/simtak/Meet-app/static/js/main.04d685ca.js",
+    "static/js/787.4b564826.chunk.js": "/simtak/Meet-app/static/js/787.4b564826.chunk.js",
+    "service-worker.js": "/simtak/Meet-app/service-worker.js",
+    "static/media/logo.svg": "/simtak/Meet-app/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
+    "index.html": "/simtak/Meet-app/index.html",
+    "main.073c9b0a.css.map": "/simtak/Meet-app/static/css/main.073c9b0a.css.map",
+    "main.04d685ca.js.map": "/simtak/Meet-app/static/js/main.04d685ca.js.map",
+    "787.4b564826.chunk.js.map": "/simtak/Meet-app/static/js/787.4b564826.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.04d685ca.js"
+  ]
+}
