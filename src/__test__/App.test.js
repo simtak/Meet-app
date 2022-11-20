@@ -14,4 +14,8 @@ describe("<App /> component", () => {
     const AppWrapper = shallow(<App />);
     expect(AppWrapper.find(CitySearch)).toHaveLength(1);
   });
+
+  test("render NumberOfEvents", () => {
+    expect(AppWrapper.find(NumberOfEvents)).toHaveLength(1);
+  });
 });
