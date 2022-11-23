@@ -8,7 +8,9 @@ describe("<CitySearch /> component", () => {
   let locations, CitySearchWrapper;
   beforeAll(() => {
     locations = extractLocations(mockData);
-    CitySearchWrapper = shallow(<CitySearch locations={locations} />);
+    CitySearchWrapper = shallow(
+      <CitySearch locations={locations} updateEvents={() => {}} />
+    );
   });
 
   test("render text input", () => {
@@ -51,5 +53,17 @@ describe("<CitySearch /> component", () => {
       return location.toUpperCase().indexOf(query.toUpperCase()) > -1;
     });
     expect(CitySearchWrapper.state("suggestions")).toEqual(filteredLocations);
+  });
+
+  test("selecting a suggestion should hide the suggestions list", () => {
+    CitySearchWrapper.setState({
+      query: "Berlin",
+      showSuggestions: undefined,
+    });
+    CitySearchWrapper.find(".suggestions li").at(0).simulate("click");
+    expect(CitySearchWrapper.state("showSuggestions")).toBe(false);
+    expect(CitySearchWrapper.find(".suggestions").prop("style")).toEqual({
+      display: "none",
+    });
   });
 });
